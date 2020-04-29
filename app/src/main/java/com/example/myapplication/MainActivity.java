@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 String text = getResources().getString(R.string.second_activity);
                 secondActivityIntent.putExtra(ExtraConstants.TEXT, text);
                 startActivity(secondActivityIntent);
-                ExtraConstants c = new ExtraConstants();
             }
         });
     }
