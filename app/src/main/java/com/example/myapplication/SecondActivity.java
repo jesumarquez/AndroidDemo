@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.myapplication.utils.ExtraConstants;
+
+import java.util.Objects;
+
 public class SecondActivity extends AppCompatActivity {
 
     @Override
@@ -12,8 +16,8 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String text = (String) getIntent().getExtras().get(ExtraConstants.TEXT);
-        TextView secondTextView = (TextView) findViewById(R.id.secondTextView);
+        String text = Objects.requireNonNull(getIntent().getExtras()).getString(ExtraConstants.TEXT);
+        TextView secondTextView = findViewById(R.id.secondTextView);
         secondTextView.setText(text);
     }
 }

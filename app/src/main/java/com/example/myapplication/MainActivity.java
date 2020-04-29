@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.myapplication.utils.ExtraConstants;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,23 +19,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button addButton = (Button)findViewById(R.id.addButton);
+        Button addButton = findViewById(R.id.addButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText firstNumberEditText = (EditText) findViewById(R.id.firstNumberEditText);
-                EditText secondNumberEditText = (EditText) findViewById(R.id.secondNumberEditText);
+                EditText firstNumberEditText = findViewById(R.id.firstNumberEditText);
+                EditText secondNumberEditText = findViewById(R.id.secondNumberEditText);
 
                 int num1 = Integer.parseInt(firstNumberEditText.getText().toString());
                 int num2 = Integer.parseInt(secondNumberEditText.getText().toString());
                 int res = num1 + num2;
 
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+                TextView resultTextView = findViewById(R.id.resultTextView);
                 resultTextView.setText(String.valueOf(res));
             }
         });
 
-        Button goToGoogleButton = (Button) findViewById(R.id.goToGoogleButton);
+        Button goToGoogleButton = findViewById(R.id.goToGoogleButton);
         goToGoogleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button goShowActivityButton = (Button) findViewById(R.id.showActivityButton);
+        Button goShowActivityButton = findViewById(R.id.showActivityButton);
         goShowActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
